@@ -7,7 +7,7 @@
                 <app-maindiv [datafromdb]="jobsdata"></app-maindiv>
             </div>
             <div class="col-md-4">
-                <app-sidediv [sidedata]="jobsdata"></app-sidediv>
+                <app-sidediv [sidedata]="jobsdata" (searchEmit)="searchFunction($event)"></app-sidediv>
             </div>
         </div>
     </div>

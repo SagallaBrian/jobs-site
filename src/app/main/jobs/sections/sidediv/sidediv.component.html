@@ -9,7 +9,7 @@
             </div>
         </li>
         <ng-container *ngFor="let jobs of sidedata.comapany_job ">
-            <a routerLink="#" (click)="searchFunction(jobs.id)" class="list-group-item list-group-item-action">
+            <a [routerLink]="['/job_details', jobs.id]" class="list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-between">
                     <h4 class="mb-1">{{jobs.title}}</h4>
                 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { JobsService } from 'src/app/core/services/jobs.service';
 
 @Component({
@@ -10,10 +11,25 @@ export class JobsComponent implements OnInit {
   jobsdata: any;
   errorMessage: any;
   loading = true;
-  constructor(private jobsev: JobsService) {}
+  jobidparam: any;
+  constructor(
+    private jobsev: JobsService,
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-    this.getJob(421);
+    this.jobidparam = this.route.snapshot.paramMap.get('id');
+    console.log(this.jobidparam);
+    if (!this.jobidparam) {
+      this.jobidparam = 421;
+      this.router.navigate(['/job_details/', this.jobidparam]);
+    } else {
+      this.route.params.subscribe((params) => {
+        this.jobidparam = params['id'];
+        this.getJob(this.jobidparam); // reset and set based on new parameter this time
+      });
+    }
   }
 
   getJob(jobid: any): void {
@@ -31,5 +47,9 @@ export class JobsComponent implements OnInit {
   errorHandle(error: any) {
     this.loading = false;
     this.errorMessage = error;
+  }
+
+  searchFunction(jobid: any) {
+    this.getJob(jobid);
   }
 }

@@ -13,7 +13,10 @@ import { MaindivComponent } from './sections/maindiv/maindiv.component';
 import { SidedivComponent } from './sections/sidediv/sidediv.component';
 import { DetailsComponent } from './sections/details/details.component';
 
-const routes: Routes = [{ path: '', component: JobsComponent }];
+const routes: Routes = [
+  { path: '', component: JobsComponent },
+  { path: ':id', component: JobsComponent },
+];
 
 @NgModule({
   declarations: [
