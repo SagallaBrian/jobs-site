@@ -1,0 +1,168 @@
+<div [innerHTML]="styleFunction(datafromdb.job_spec.description)"></div>
+<!-- <div [innerHTML]="datafromdb.job_spec.requirements"></div>
+<div [innerHTML]="datafromdb.job_spec.offers"></div> -->
+
+<div>
+    <h3 class="fw-normal">Languages</h3>
+    <div class="row">
+        <ng-container *ngFor="let langs of datafromdb.job_lang">
+            <div class="col-lg-3 col-md-6">
+                <div class="alert alert-danger ">
+                    <h4 class="text-dark">{{langs.name}}</h4>
+                    <p class="fw-normal text-dark">Speaking Skills
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <br>
+                        Writing Skills
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        <i class="fa fa-star text-warning" aria-hidden="true"></i>
+
+                    </p>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+<div class="pt-3">
+    <h3 class="fw-normal mb-0">Computer Skills / Languages</h3>
+    <div class="pt-1">
+        <h4 class="fw-normal mb-1">Office Automation</h4>
+        <div class="row">
+            <ng-container *ngFor="let langs of datafromdb.job_Computer_Skills">
+                <div class="col-lg-3 col-md-6">
+                    <div class="alert alert-danger ">
+                        <h4 class="text-dark mb-0">{{langs.name}}</h4>
+                        <p class="fw-normal text-dark p-0 m-0">Levels
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <div class="pt-1">
+        <h4 class="fw-normal mb-1">Programming Skills</h4>
+        <div class="row">
+            <ng-container *ngFor="let skilss of datafromdb.job_Skills">
+                <div class="col-lg-3 col-md-6">
+                    <div class="alert alert-danger ">
+                        <h4 class="text-dark mb-0">{{skilss.name}}</h4>
+                        <p class="fw-normal text-dark p-0 m-0">Levels
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <div class="pt-1">
+        <h4 class="fw-normal mb-1">Databases</h4>
+        <div class="row">
+            <ng-container *ngFor="let langs of datafromdb.job_Computer_Skills">
+                <div class="col-lg-3 col-md-6">
+                    <div class="alert alert-danger ">
+                        <h4 class="text-dark mb-0">{{langs.name}}</h4>
+                        <p class="fw-normal text-dark p-0 m-0">Levels
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <div class="pt-1">
+        <h4 class="fw-normal mb-1">Hardware, Server and Ethernet</h4>
+        <div class="row">
+            <ng-container *ngFor="let langs of datafromdb.job_Computer_Skills">
+                <div class="col-lg-3 col-md-6">
+                    <div class="alert alert-danger ">
+                        <h4 class="text-dark mb-0">{{langs.name}}</h4>
+                        <p class="fw-normal text-dark p-0 m-0">Levels
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <div class="pt-1">
+        <h4 class="fw-normal mb-1">Technical Skills</h4>
+        <div class="row">
+            <ng-container *ngFor="let langs of datafromdb.job_Computer_Skills">
+                <div class="col-lg-3 col-md-6">
+                    <div class="alert alert-danger ">
+                        <h4 class="text-dark mb-0">{{langs.name}}</h4>
+                        <p class="fw-normal text-dark p-0 m-0">Levels
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+    <div class="pt-1">
+        <h4 class="fw-normal mb-1">Ohers</h4>
+        <div class="row">
+            <ng-container *ngFor="let langs of datafromdb.job_Computer_Skills">
+                <div class="col-lg-3 col-md-6">
+                    <div class="alert alert-danger ">
+                        <h4 class="text-dark mb-0">{{langs.name}}</h4>
+                        <p class="fw-normal text-dark p-0 m-0">Levels
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                            <i class="fa fa-star text-warning" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
+
+
+<div class="pt-3">
+    <h3 class="fw-normal mb-0">Documents Required</h3>
+    <ul>
+        <li *ngFor="let document of datafromdb.job_Documents"> {{document.name}}</li>
+    </ul>
+
+</div>
+
+<div class="py-3">
+    <h3 class="fw-normal">
+        <span class="border-bottom border-3 border-success pb-1 px-4">
+            Q&A &nbsp;
+        </span>
+    </h3>
+
+    <ol class="list-group list-group-numbered">
+        <ng-container *ngFor="let quiz of datafromdb.job_Questions">
+            <li class="list-group-item"> {{quiz.name}} </li>
+        </ng-container>
+    </ol>
+</div>

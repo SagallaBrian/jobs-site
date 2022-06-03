@@ -1,0 +1,96 @@
+<div class="row pt-3">
+    <div class="col-8">
+
+        <h3 class="fw-normal">
+            <span class="border-bottom border-3 border-success pb-1">
+                Jobs Details &nbsp;
+            </span>
+        </h3>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="p-2">
+                    <i class="fa fa-user" aria-hidden="true"></i> &nbsp; Age
+                    {{detailsdata.job_spec.min_age }} -
+                    {{detailsdata.job_spec.max_age }}
+                </div>
+                <div class="p-2">
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i> &nbsp; Education
+                    {{detailsdata.job_spec.minimum_education_name }}
+                </div>
+                <div class="p-2">
+                    <i class="fa fa-briefcase" aria-hidden="true"></i> &nbsp; Experience
+                    {{detailsdata.job_spec.min_experience }} -
+                    {{detailsdata.job_spec.max_experience }} Years
+                </div>
+                <div class="p-2">
+                    <i class="fa fa-venus-mars" aria-hidden="true"></i> &nbsp; Gender
+                    {{detailsdata.job_spec.gender_name }}
+                </div>
+                <div class="p-2">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp; Working Hours
+                    {{detailsdata.job_spec.working_hours }}
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="p-2">
+                    <i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp;
+                    {{detailsdata.job_spec.working_days_name }}
+                </div>
+                <div class="p-2">
+                    <i class="fa fa-suitcase" aria-hidden="true"></i> &nbsp; Contract
+                    {{detailsdata.job_spec.contract_name }}
+                </div>
+                <div class="p-2">
+                    <i class="fa fa-money" aria-hidden="true"></i> &nbsp; Salary
+                    {{detailsdata.job_spec.salary | currency }}
+                </div>
+                <div class="p-2">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp;
+                    {{detailsdata.job_spec.state_name }},
+                    {{detailsdata.job_spec.city_name }},
+                    {{detailsdata.job_spec.country_name }}
+                </div>
+                <div class="p-2">
+                    <i class="fa fa-suitcase" aria-hidden="true"></i> &nbsp; Work Type
+                    {{detailsdata.job_spec.working_days_name }}
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="col-4">
+
+        <div class="p-2">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+
+            {{detailsdata.job_spec.created_at | date}}
+        </div>
+        <div class="py-3">
+            <img [src]="detailsdata.job_spec.company_logo" alt="" class="img-fluid">
+        </div>
+
+
+    </div>
+</div>
+
+<div class="row pb-3">
+    <div class="col-12">
+        <h3 class="fw-normal">
+            <span class="border-bottom border-3 border-success pb-1">
+                Professions &nbsp;
+            </span>
+        </h3>
+        <ng-container *ngFor="let job_prof of detailsdata.job_prof_interests">
+            <span class="alert alert-primary p-1 mb-1" role="alert">
+                {{job_prof.professional_interest_name}}
+            </span>
+
+
+        </ng-container>
+
+    </div>
+</div>

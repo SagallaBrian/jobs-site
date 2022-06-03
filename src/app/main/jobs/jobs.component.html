@@ -1,0 +1,14 @@
+<div *ngIf="jobsdata" class="py-3">
+    <app-header [headerdata]="jobsdata"></app-header>
+    <div class="container">
+        <app-details [detailsdata]="jobsdata"></app-details>
+        <div class="row">
+            <div class="col-md-8">
+                <app-maindiv [datafromdb]="jobsdata"></app-maindiv>
+            </div>
+            <div class="col-md-4">
+                <app-sidediv [sidedata]="jobsdata"></app-sidediv>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div>
+    <div class="py-5 px-3 my-3 bg-light">
+        <h3 class="fw-normal">Google Ads Here ...</h3>
+    </div>
+    <div class="list-group">
+        <li class="list-group-item " aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+                <h2 class="mb-1"> More {{sidedata.job_spec.company_name}} Jobs </h2>
+            </div>
+        </li>
+        <ng-container *ngFor="let jobs of sidedata.comapany_job ">
+            <a routerLink="#" (click)="searchFunction(jobs.id)" class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h4 class="mb-1">{{jobs.title}}</h4>
+                </div>
+                <p class="mb-1">
+                    <i class="fa fa-map-marker text-primary " aria-hidden="true"></i> &nbsp;
+                    {{jobs.state_name }},
+                    {{jobs.city_name }},
+                    {{jobs.country_name }}
+                </p>
+                <small class="text-muted">
+                    <i class="fa fa-calendar text-primary" aria-hidden="true"></i>
+                    {{jobs.created_at | date}} -
+                    {{jobs.created_at | date}}
+                </small>
+            </a>
+        </ng-container>
+
+    </div>
+</div>
