@@ -20,14 +20,14 @@ export class JobsComponent implements OnInit {
 
   ngOnInit(): void {
     this.jobidparam = this.route.snapshot.paramMap.get('id');
-    console.log(this.jobidparam);
     if (!this.jobidparam) {
       this.jobidparam = 421;
       this.router.navigate(['/job_details/', this.jobidparam]);
     } else {
       this.route.params.subscribe((params) => {
+        this.loading = true;
         this.jobidparam = params['id'];
-        this.getJob(this.jobidparam); // reset and set based on new parameter this time
+        this.getJob(this.jobidparam);
       });
     }
   }

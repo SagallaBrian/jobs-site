@@ -1,14 +1,25 @@
-<div *ngIf="jobsdata" class="py-3">
-    <app-header [headerdata]="jobsdata"></app-header>
-    <div class="container">
-        <app-details [detailsdata]="jobsdata"></app-details>
-        <div class="row">
-            <div class="col-md-8">
-                <app-maindiv [datafromdb]="jobsdata"></app-maindiv>
-            </div>
-            <div class="col-md-4">
-                <app-sidediv [sidedata]="jobsdata" (searchEmit)="searchFunction($event)"></app-sidediv>
+<div class="">
+    <div class=" container my-5 alert alert-warning my-3" *ngIf="loading; else noloading"> loading ... </div>
+</div>
+<ng-template #noloading>
+    <div *ngIf="jobsdata; else errors" class="pb-3">
+        <app-header [headerdata]="jobsdata"></app-header>
+        <div class="container">
+            <app-details [detailsdata]="jobsdata"></app-details>
+            <div class="row">
+                <div class="col-md-8">
+                    <app-maindiv [datafromdb]="jobsdata"></app-maindiv>
+                </div>
+                <div class="col-md-4">
+                    <app-sidediv [sidedata]="jobsdata" (searchEmit)="searchFunction($event)"></app-sidediv>
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <ng-template #errors>
+        <div class="container py-5">
+            <div class="alert alert-danger my-3"> An Error Occured </div>
+        </div>
+    </ng-template>
+
+</ng-template>
